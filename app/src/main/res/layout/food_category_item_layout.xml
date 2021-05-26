@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+
+        android:checkable="true"
+        android:theme="@style/Theme.MaterialComponents.Light">
+
+
+
+        <FrameLayout
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/imgCate"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                scaleType="centerCrop"
+                android:background="@android:color/transparent"
+                android:contentDescription="Card Image"
+                app:backgroundTint="@color/material_on_surface_emphasis_medium"
+                app:backgroundTintMode="add"
+                app:brightness="@integer/material_motion_duration_medium_2"
+                android:scaleType="centerCrop"
+                android:backgroundTint="@color/white"
+                app:srcCompat="@drawable/img" >
+
+            </androidx.constraintlayout.utils.widget.ImageFilterView>
+
+            <TextView
+                android:id="@+id/titleCate"
+                android:shadowColor="@color/black"
+                android:paddingLeft="4dp"
+                android:background="@color/md_orange_500"
+                android:textColor="@color/white"
+                android:layout_gravity="bottom"
+                style="?attr/textAppearanceSubtitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title category"/>
+        </FrameLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

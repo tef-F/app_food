@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/meHome"
+        android:title="Trang chủ"
+        android:icon="@drawable/ic_home"/>
+
+    <item
+        android:id="@+id/meSearch"
+        android:title="Tìm kiếm"
+        android:icon="@drawable/ic_search"/>
+
+    <item
+        android:id="@+id/meAdd"
+        android:title="Thêm"
+        android:icon="@drawable/ic_add_box"/>
+
+    <item
+        android:id="@+id/meNotification"
+        android:title="Thông báo"
+        android:icon="@drawable/ic_notifications"/>
+
+    <item
+        android:id="@+id/meProfile"
+        android:title="Profile"
+        android:icon="@drawable/ic_person"/>
+
+</menu>

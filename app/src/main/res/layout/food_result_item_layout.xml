@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    tools:context=".Activity.MainActivity">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view_rs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:checkable="true"
+        android:theme="@style/Theme.MaterialComponents.Light">
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:paddingBottom="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_margin="4dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Title"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tv_desc"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Ussename" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/avtUser"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                       android:layout_margin="4dp"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_person"
+                        app:shapeAppearanceOverlay="@style/circleImageViewStyle"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp" />
+
+                    <TextView
+                        android:id="@+id/tv_username"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Username" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="match_parent" >
+
+                <androidx.appcompat.widget.AppCompatImageView
+
+                    android:id="@+id/img_Food"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    scaleType="centerCrop"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Card Image"
+                    app:backgroundTint="@color/material_on_surface_emphasis_medium"
+                    app:backgroundTintMode="add"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/img" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

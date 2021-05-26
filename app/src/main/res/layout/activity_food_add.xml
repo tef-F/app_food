@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_grey_100"
+    android:orientation="vertical"
+    tools:context=".Activity.FoodAddActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:background="@color/white"
+        android:backgroundTintMode="screen"
+        app:menu="@menu/menu_add_food"
+        android:minHeight="?attr/actionBarSize">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <ImageView
+                android:id="@+id/backItem"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_arrow_back"
+                android:layout_marginRight="10dp"/>
+
+            <Button
+                android:id="@+id/save_food_btn"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:text="@string/save_btn"/>
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical" >
+
+               <FrameLayout
+                   android:layout_width="match_parent"
+                   android:layout_gravity="center_vertical"
+                   android:layout_height="300dp">
+
+                   <com.google.android.material.imageview.ShapeableImageView
+                       android:id="@+id/add_img"
+                       android:layout_width="fill_parent"
+                       android:layout_height="match_parent"
+                       android:scaleType="centerCrop"
+                       android:src="@drawable/bg_add" />
+
+                   <Button
+                       android:id="@+id/add_img_btn"
+                       android:paddingLeft="16dp"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="bottom"
+                       android:background="#7A3C3232"
+                       android:drawableStart="@drawable/ic_baseline_add_photo"
+                       android:shadowColor="@color/colorBackground"
+                       android:text="@string/img_food_add"
+                       android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button"
+                       android:textColor="#FFFFFF"
+                       android:textStyle="bold" />
+               </FrameLayout>
+
+
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+
+                   <com.google.android.material.textfield.TextInputLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:gravity="center"
+                       app:hintEnabled="false">
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:id="@+id/ed_title"
+                           android:imeOptions="actionNext"
+                           android:layout_marginTop="8dp"
+                           android:layout_marginBottom="8dp"
+                           android:layout_marginLeft="28dp"
+                           android:layout_marginRight="28dp"
+                           android:gravity="center"
+                           android:hint="@string/hint_food"
+                           android:layout_width="match_parent"
+                           android:background="@drawable/border_edittext"
+                           android:layout_height="60dp"/>
+
+
+                   </com.google.android.material.textfield.TextInputLayout>
+
+                   <com.google.android.material.textfield.TextInputLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:gravity="center"
+                       app:hintEnabled="false">
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:imeOptions="actionNext"
+                           android:id="@+id/ed_desc"
+                           android:layout_marginTop="8dp"
+                           android:layout_marginBottom="8dp"
+                           android:maxLines="100"
+                           android:gravity="top|center"
+                           android:hint="@string/hint_desc"
+                           android:layout_marginLeft="28dp"
+                           android:layout_marginRight="28dp"
+                           android:layout_width="match_parent"
+                           android:background="@drawable/border_edittext"
+                           android:layout_height="150dp" />
+
+                   </com.google.android.material.textfield.TextInputLayout>
+
+
+                   <LinearLayout
+                       android:layout_marginTop="8dp"
+                       android:layout_marginBottom="8dp"
+                       android:layout_marginLeft="28dp"
+                       android:layout_marginRight="28dp"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal">
+
+                       <TextView
+                           android:layout_width="100dp"
+                           android:layout_height="match_parent"
+                           android:gravity="left|center"
+                           android:text="@string/time_hint">
+
+                       </TextView>
+
+
+                       <androidx.appcompat.widget.AppCompatEditText
+                           android:imeOptions="actionNext"
+                           android:id="@+id/ed_time"
+                           android:background="@drawable/border_edittext"
+                           android:layout_width="match_parent"
+                           android:layout_height="40dp" >
+
+                       </androidx.appcompat.widget.AppCompatEditText>
+                   </LinearLayout>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_margin="4dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="300dp"
+                   android:orientation="vertical">
+                   <TextView
+                       android:layout_marginLeft="28dp"
+                       android:layout_marginRight="28dp"
+                       android:layout_marginTop="4dp"
+                       android:layout_marginBottom="4dp"
+                       android:textSize="16dp"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="@string/ing"/>
+                   <com.google.android.material.textfield.TextInputLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:gravity="center"
+                       app:hintEnabled="false">
+
+                       <com.google.android.material.textfield.TextInputEditText
+                           android:imeOptions="actionNext"
+                           android:padding="4dp"
+                           android:id="@+id/ed_ing"
+                           android:background="@drawable/border_edittext"
+                           android:layout_marginLeft="28dp"
+                           android:layout_marginRight="28dp"
+                           android:layout_marginTop="4dp"
+                           android:layout_marginBottom="4dp"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:gravity="top|center"
+                           android:text="@string/ing_input"/>
+
+                   </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_margin="4dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical">
+                   <TextView
+                       android:layout_marginLeft="28dp"
+                       android:layout_marginRight="28dp"
+                       android:layout_marginTop="4dp"
+                       android:layout_marginBottom="4dp"
+                       android:textSize="16dp"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="@string/making"/>
+                   <Button
+                       android:id="@+id/btn_add_food"
+                       android:background="@drawable/border_edittext"
+                       android:layout_marginLeft="28dp"
+                       android:layout_marginRight="28dp"
+                       android:layout_marginTop="4dp"
+                       android:layout_marginBottom="4dp"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="@string/btn_add_food" />
+                   <LinearLayout
+                       android:id="@+id/card_add_step"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+
+
+                   </LinearLayout>
+
+
+               </LinearLayout>
+
+
+
+
+
+           </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+
+
+</LinearLayout>
